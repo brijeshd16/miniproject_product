@@ -1,0 +1,16 @@
+extend layout
+
+block content
+    h1 #{title}
+    form(method = 'POST', action = '/products/add')
+        #form-group
+            label Name:
+            input.form-control(name="name" type="text")
+        #form-group
+            label Price:
+            input.form-control(name="price" type="text")
+        #form-group
+            label Category:
+            textarea.form-control(name="category")
+        br
+        input.btn.btn-primary(type="submit" value="Submit")

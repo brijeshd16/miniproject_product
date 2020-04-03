@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 #{product.name}
+    h3 Price ~ #{product.price}
+    p= product.category
+    hr
+    a.btn.btn-primary(href='/products/edit/'+product._id) Edit

@@ -1,0 +1,16 @@
+extend layout
+
+block content
+    h1 #{title}
+    form(method = 'POST', action = '/products/edit/'+product._id)
+        #form-group
+            label Name:
+            input.form-control(name="name" type="text", value=product.name)
+        #form-group
+            label Price:
+            input.form-control(name="price" type="text", value=product.price)
+        #form-group
+            label Category:
+            textarea.form-control(name="category")= product.category
+        br
+        input.btn.btn-primary(type="submit" value="Submit")

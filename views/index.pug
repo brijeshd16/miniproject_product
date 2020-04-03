@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 #{title}
+    ul.list-group
+    each product, i in products
+        li.list-group-item
+            a(href="/product/"+product._id)= product.name
